@@ -1,3 +1,4 @@
+package gensokyo;
 import java.awt.*;
 import javax.swing.*;
 // -------------------------------------------------------------------------
@@ -11,6 +12,7 @@ import javax.swing.*;
  */
 public class ChessPanel
     extends JPanel{
+	private static final long serialVersionUID = 1L;
     private ChessMenuBar    menuBar;
     private ChessGameBoard  gameBoard;
     private ChessGameLog    gameLog;

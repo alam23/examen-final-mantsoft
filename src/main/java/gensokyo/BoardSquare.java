@@ -1,3 +1,4 @@
+package gensokyo;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 // -------------------------------------------------------------------------
@@ -11,6 +12,7 @@ import javax.swing.JPanel;
  */
 public class BoardSquare
     extends JPanel{
+	private static final long serialVersionUID = 7734789932188332031L;
     private int            row;
     private int            col;
     private ChessGamePiece piece;

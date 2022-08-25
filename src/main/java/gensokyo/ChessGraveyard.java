@@ -1,3 +1,4 @@
+package gensokyo;
 import java.awt.GridLayout;
 import javax.swing.*;
 // -------------------------------------------------------------------------

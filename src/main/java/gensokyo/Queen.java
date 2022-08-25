@@ -1,6 +1,7 @@
+package gensokyo;
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
-// import java.awt.Color;
+
 // -------------------------------------------------------------------------
 /**
  * Represents a Queen game piece.
@@ -35,23 +36,8 @@ public class Queen
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
-        ArrayList<String> northEastMoves = calculateNorthEastMoves( board, 8 );
-        ArrayList<String> northWestMoves = calculateNorthWestMoves( board, 8 );
-        ArrayList<String> southEastMoves = calculateSouthEastMoves( board, 8 );
-        ArrayList<String> southWestMoves = calculateSouthWestMoves( board, 8 );
-        ArrayList<String> northMoves = calculateNorthMoves( board, 8 );
-        ArrayList<String> southMoves = calculateSouthMoves( board, 8 );
-        ArrayList<String> eastMoves = calculateEastMoves( board, 8 );
-        ArrayList<String> westMoves = calculateWestMoves( board, 8 );
-        ArrayList<String> allMoves = new ArrayList<String>();
-        allMoves.addAll( northEastMoves );
-        allMoves.addAll( northWestMoves );
-        allMoves.addAll( southWestMoves );
-        allMoves.addAll( southEastMoves );
-        allMoves.addAll( northMoves );
-        allMoves.addAll( southMoves );
-        allMoves.addAll( westMoves );
-        allMoves.addAll( eastMoves );
+        ArrayList<String> allMoves = new ArrayList<>();
+        calculateAllMoves(board, allMoves, 8);
         return allMoves;
     }
     /**
@@ -63,18 +49,18 @@ public class Queen
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                getClass().getResource("chessImages/WhiteQueen.gif")
+                getClass().getResource("/chessImages/WhiteQueen.gif")
             );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                getClass().getResource("chessImages/BlackQueen.gif")
+                getClass().getResource("/chessImages/BlackQueen.gif")
             );            
         }
         else
         {
             return new ImageIcon(
-                getClass().getResource("chessImages/default-Unassigned.gif")
+                getClass().getResource("/chessImages/default-Unassigned.gif")
             ); 
         }
     }
